@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+
+
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+    <util:list list-class="java.util.LinkedList" id="myfriends">
+        <value>Amit</value>
+        <value>Ajeet</value>
+        <value>Arun</value>
+        <value>Anurag</value>
+    </util:list>
+    <util:properties id="myconnection">
+        <prop key="driver">com.mysql.jdbc.driver</prop>
+        <prop key="url">mysql:jdbc://localhost:3306/database</prop>
+        <prop key="password">root</prop>
+        <prop key="username">root</prop>
+
+
+    </util:properties>
+    <bean name="person1" class="org.SpringCoreBeans.StandAloneCollections.Person">
+        <property name="friends" ref="myfriends"/>
+        <property name="properties" ref="myconnection"/>
+
+    </bean>
+
+
+</beans>

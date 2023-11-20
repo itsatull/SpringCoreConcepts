@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/><!--use to configure annotations -->
+    <!--    <bean name="Book1" class="org.SpringCoreBeans.LifeCycle.Books" init-method="init" destroy-method="destroy">-->
+    <!--        <property name="price" value="1000"/>-->
+
+    <!--    </bean>-->
+    <!--    <bean name="book2" class="org.SpringCoreBeans.LifeCycle.BooksLifeCycleUsingInterface">-->
+    <!--        <property name="price" value="1005"/>-->
+    <!--    </bean>-->
+    <bean name="book3" class="org.SpringCoreBeans.LifeCycle.BooksLifeCycleAnnotations">
+        <property name="price" value="1005"/>
+    </bean>
+
+</beans>

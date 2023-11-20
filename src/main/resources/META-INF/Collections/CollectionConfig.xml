@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--here is our bean which is a meta data for creation of object which ioc container will create-->
+    <bean class="org.SpringCoreBeans.Collections.Employee" name="employee1">
+        <!--<property> is used for setter injection-->
+        <property name="name" value="Rahul"/>
+        <property name="phones">
+            <list>
+                <value>86488</value>
+                <value>23232</value>
+                <value>86488</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>lakhnow</value>
+                <value>Delhi</value>
+                <value>Mumbai</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <!--inside entry we give key and vale-->
+                <entry key="java core" value="2months"/>
+                <entry key="java Advance" value="1months"/>
+                <entry key="Spring" value="4months"/>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/><!--annotation config  used to activate the dependency injection annotations. @Autowired, @Qualifier, @PostConstruct, @PreDestroy, and @Resource  -->
+    <bean name="depatment1" class="org.SpringCoreBeans.Autowiring.Annotation.Department" primary="true">
+        <property name="departmentName" value="Testing"/>
+    </bean>
+    <bean name="depatment2" class="org.SpringCoreBeans.Autowiring.Annotation.Department">
+        <property name="departmentName" value="Development"/>
+    </bean>
+    <bean name="employee1" class="org.SpringCoreBeans.Autowiring.Annotation.Employee"/>
+
+</beans>

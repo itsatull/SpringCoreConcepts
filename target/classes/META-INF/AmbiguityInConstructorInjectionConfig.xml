@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="Addition1" class="org.SpringCoreBeans.AmbguityInconstructorInjection.Addition">
+        <constructor-arg
+                value="1212"/><!--one constructor-arg for one parameter by default type is String which is an ambiguity-->
+        <constructor-arg value="1221"/>
+    </bean>
+    <!--    We can over come this problem by giving type-->
+    <bean name="Addition2" class="org.SpringCoreBeans.AmbguityInconstructorInjection.Addition">
+        <constructor-arg value="16556" type="Integer"/>
+        <constructor-arg value="165156" type="Integer"/>
+    </bean>
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--here is our bean which is a meta data for creation of object which ioc container will create-->
+    <bean class="org.SpringCoreBeans.DependencySetterInjection.Parent" name="Parent1">
+        <!--<property> is used for setter injection-->
+        <property name="parent" value="raghav"/>
+        <!--ref keword is used for User Defined DataTypes-->
+        <!--        <property name="student">-->
+        <!--            <ref bean="Student1"></ref>-->
+        <!--        </property>-->
+        <!--        or below code -->
+        <property name="student" ref="Student1"/>
+    </bean>
+    <bean class="org.SpringCoreBeans.Student" name="Student1">
+        <!--<property> is used for setter injection-->
+        <property name="studentId" value="101"/>
+        <property name="studentName" value="Ajeet"/>
+        <property name="studentAddress" value="lakhnow"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="student1" class="org.SpringCoreBeans.Student">
+        <constructor-arg value="1212"
+                         type="Long"/><!--one constructor-arg for one parameter by default type is String which is an ambiguity-->
+        <constructor-arg value="Ram"/>
+        <constructor-arg value="Mohali"/>
+    </bean>
+    <bean name="parent1" class="org.SpringCoreBeans.DependencySetterInjection.Parent">
+        <constructor-arg ref="student1" type="Student"/>
+        <constructor-arg value="Ravi"/>
+    </bean>
+</beans>
